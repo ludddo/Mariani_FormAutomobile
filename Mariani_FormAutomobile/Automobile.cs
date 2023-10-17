@@ -9,7 +9,7 @@ namespace Mariani_FormAutomobile
 {
     internal class Automobile
     {
-        private string azione;
+        private int velocita;
         private bool attiva;
         public int marcia;
 
@@ -30,29 +30,41 @@ namespace Mariani_FormAutomobile
             marcia = numero;
         }
 
-        public int Accellera(string azione) 
+        public void Accellera(string cosaFare) 
         {
+            int i = 0;
+
+            if (cosaFare == "accellera") { i = 0;}
+            else { i = -20;}
+
             if (attiva)
             {
+
                 switch (marcia)
                 {
                     case 1:
-                        return 30;
+                        velocita = 30 + i;
+                        break;
                     case 2:
-                        return 60;
+                        velocita = 60 + i;
+                        break;
                     case 3:
-                        return 90;
+                        velocita = 90 + i;
+                        break;
                     case 4:
-                        return 120;
+                        velocita = 120 + i;
+                        break;
                     case 5:
-                        return 150;
+                        velocita = 150 + i;
+                        break;
                     default:
-                        return -2;
+                        velocita = -2;
+                        break;
                 }
             }
             else
             {
-                return -1;
+                velocita = -1;
             }
         }
     }
