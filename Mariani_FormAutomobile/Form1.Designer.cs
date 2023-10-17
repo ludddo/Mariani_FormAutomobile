@@ -42,42 +42,46 @@
             // 
             // Accellera
             // 
+            this.Accellera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Accellera.Location = new System.Drawing.Point(160, 131);
             this.Accellera.Name = "Accellera";
             this.Accellera.Size = new System.Drawing.Size(60, 23);
             this.Accellera.TabIndex = 0;
             this.Accellera.Text = "Accellera";
-            this.Accellera.UseVisualStyleBackColor = true;
+            this.Accellera.UseVisualStyleBackColor = false;
             this.Accellera.Click += new System.EventHandler(this.Accellera_Click);
             // 
             // Accendi
             // 
-            this.Accendi.Location = new System.Drawing.Point(34, 85);
+            this.Accendi.BackColor = System.Drawing.Color.Cyan;
+            this.Accendi.Location = new System.Drawing.Point(34, 46);
             this.Accendi.Name = "Accendi";
             this.Accendi.Size = new System.Drawing.Size(75, 23);
             this.Accendi.TabIndex = 1;
             this.Accendi.Text = "Accendi";
-            this.Accendi.UseVisualStyleBackColor = true;
+            this.Accendi.UseVisualStyleBackColor = false;
             this.Accendi.Click += new System.EventHandler(this.Accendi_Click);
             // 
             // Spegni
             // 
-            this.Spegni.Location = new System.Drawing.Point(34, 114);
+            this.Spegni.BackColor = System.Drawing.Color.Red;
+            this.Spegni.Location = new System.Drawing.Point(34, 75);
             this.Spegni.Name = "Spegni";
             this.Spegni.Size = new System.Drawing.Size(75, 23);
             this.Spegni.TabIndex = 2;
             this.Spegni.Text = "Spegni";
-            this.Spegni.UseVisualStyleBackColor = true;
+            this.Spegni.UseVisualStyleBackColor = false;
             this.Spegni.Click += new System.EventHandler(this.Spegni_Click);
             // 
             // Decellera
             // 
+            this.Decellera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Decellera.Location = new System.Drawing.Point(226, 131);
             this.Decellera.Name = "Decellera";
             this.Decellera.Size = new System.Drawing.Size(64, 23);
             this.Decellera.TabIndex = 3;
             this.Decellera.Text = "Decellera";
-            this.Decellera.UseVisualStyleBackColor = true;
+            this.Decellera.UseVisualStyleBackColor = false;
             this.Decellera.Click += new System.EventHandler(this.Decellera_Click);
             // 
             // listView1
@@ -92,52 +96,57 @@
             // 
             // marcia1
             // 
+            this.marcia1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.marcia1.Location = new System.Drawing.Point(160, 160);
             this.marcia1.Name = "marcia1";
             this.marcia1.Size = new System.Drawing.Size(25, 23);
             this.marcia1.TabIndex = 5;
             this.marcia1.Text = "1";
-            this.marcia1.UseVisualStyleBackColor = true;
+            this.marcia1.UseVisualStyleBackColor = false;
             this.marcia1.Click += new System.EventHandler(this.marcia1_Click);
             // 
             // marcia2
             // 
+            this.marcia2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.marcia2.Location = new System.Drawing.Point(160, 189);
             this.marcia2.Name = "marcia2";
             this.marcia2.Size = new System.Drawing.Size(25, 23);
             this.marcia2.TabIndex = 6;
             this.marcia2.Text = "2";
-            this.marcia2.UseVisualStyleBackColor = true;
+            this.marcia2.UseVisualStyleBackColor = false;
             this.marcia2.Click += new System.EventHandler(this.marcia2_Click);
             // 
             // marcia3
             // 
+            this.marcia3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.marcia3.Location = new System.Drawing.Point(210, 160);
             this.marcia3.Name = "marcia3";
             this.marcia3.Size = new System.Drawing.Size(25, 23);
             this.marcia3.TabIndex = 7;
             this.marcia3.Text = "3";
-            this.marcia3.UseVisualStyleBackColor = true;
+            this.marcia3.UseVisualStyleBackColor = false;
             this.marcia3.Click += new System.EventHandler(this.marcia3_Click);
             // 
             // marcia4
             // 
+            this.marcia4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.marcia4.Location = new System.Drawing.Point(210, 189);
             this.marcia4.Name = "marcia4";
             this.marcia4.Size = new System.Drawing.Size(25, 23);
             this.marcia4.TabIndex = 8;
             this.marcia4.Text = "4";
-            this.marcia4.UseVisualStyleBackColor = true;
+            this.marcia4.UseVisualStyleBackColor = false;
             this.marcia4.Click += new System.EventHandler(this.marcia4_Click);
             // 
             // marcia5
             // 
+            this.marcia5.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.marcia5.Location = new System.Drawing.Point(265, 160);
             this.marcia5.Name = "marcia5";
             this.marcia5.Size = new System.Drawing.Size(25, 23);
             this.marcia5.TabIndex = 9;
             this.marcia5.Text = "5";
-            this.marcia5.UseVisualStyleBackColor = true;
+            this.marcia5.UseVisualStyleBackColor = false;
             this.marcia5.Click += new System.EventHandler(this.marcia5_Click);
             // 
             // Form1
