@@ -98,6 +98,7 @@
             this.marcia1.TabIndex = 5;
             this.marcia1.Text = "1";
             this.marcia1.UseVisualStyleBackColor = true;
+            this.marcia1.Click += new System.EventHandler(this.marcia1_Click);
             // 
             // marcia2
             // 
@@ -107,6 +108,7 @@
             this.marcia2.TabIndex = 6;
             this.marcia2.Text = "2";
             this.marcia2.UseVisualStyleBackColor = true;
+            this.marcia2.Click += new System.EventHandler(this.marcia2_Click);
             // 
             // marcia3
             // 
@@ -116,6 +118,7 @@
             this.marcia3.TabIndex = 7;
             this.marcia3.Text = "3";
             this.marcia3.UseVisualStyleBackColor = true;
+            this.marcia3.Click += new System.EventHandler(this.marcia3_Click);
             // 
             // marcia4
             // 
@@ -125,6 +128,7 @@
             this.marcia4.TabIndex = 8;
             this.marcia4.Text = "4";
             this.marcia4.UseVisualStyleBackColor = true;
+            this.marcia4.Click += new System.EventHandler(this.marcia4_Click);
             // 
             // marcia5
             // 
@@ -134,6 +138,7 @@
             this.marcia5.TabIndex = 9;
             this.marcia5.Text = "5";
             this.marcia5.UseVisualStyleBackColor = true;
+            this.marcia5.Click += new System.EventHandler(this.marcia5_Click);
             // 
             // Form1
             // 

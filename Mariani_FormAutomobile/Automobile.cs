@@ -22,10 +22,14 @@ namespace Mariani_FormAutomobile
 
         public void Spegni()
         {
-            attiva = false;
+            if ( marcia == 1 )
+            {
+                attiva = false;
+                velocita = 0;
+            }
         }
 
-        public void Marcia(int numero)
+        public void SetMarcia(int numero)
         {
             marcia = numero;
         }
