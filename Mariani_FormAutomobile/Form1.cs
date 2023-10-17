@@ -23,9 +23,38 @@ namespace Mariani_FormAutomobile
             auto.Accendi();
         }
 
+        private void Spegni_Click(object sender, EventArgs e)
+        {
+            auto.Spegni();
+        }
+
         private void Accellera_Click(object sender, EventArgs e)
         {
+            auto.Movimento("accellera");
+            int velocita = auto.GetVelocita();
+            if (velocita == -1)
+            {
+                MessageBox.Show("Accendere l'Auto");
+                return;
+            }
+            listView1.Items.Clear();
+
+            listView1.Items.Add("Velocità Attuale: " + auto.GetVelocita());
+            listView1.Items.Add("Marcia Attuale: " + auto.GetMarcia());
             
+        }
+
+        private void Decellera_Click(object sender, EventArgs e)
+        {
+            auto.Movimento("decellera");
+        }
+
+        private void StatoAttuale()
+        {
+            listView1.Items.Clear();
+            listView1.Items.Add("Stato dell'Auto: " + auto.GetAttiva());
+            listView1.Items.Add("Marcia Attuale: " + auto.GetMarcia());
+            listView1.Items.Add("Velocità Attuale: " + auto.GetVelocita());
         }
     }
 }

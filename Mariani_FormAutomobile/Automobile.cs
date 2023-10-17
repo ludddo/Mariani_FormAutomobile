@@ -13,7 +13,7 @@ namespace Mariani_FormAutomobile
         private bool attiva;
         public int marcia;
 
-        public Automobile() { }
+        public Automobile() { velocita = 0; marcia = 1; }
 
         public void Accendi()
         {
@@ -30,7 +30,7 @@ namespace Mariani_FormAutomobile
             marcia = numero;
         }
 
-        public void Accellera(string cosaFare) 
+        public void Movimento(string cosaFare) 
         {
             int i = 0;
 
@@ -57,14 +57,33 @@ namespace Mariani_FormAutomobile
                     case 5:
                         velocita = 150 + i;
                         break;
-                    default:
-                        velocita = -2;
-                        break;
                 }
             }
             else
             {
                 velocita = -1;
+            }
+        }
+
+        public int GetVelocita()
+        {
+            return velocita;
+        }
+
+        public int GetMarcia()
+        {
+            return marcia;
+        }
+
+        public string GetAttiva()
+        {
+            if (attiva)
+            {
+                return "accesa";
+            }
+            else
+            {
+                return "spenta";
             }
         }
     }
