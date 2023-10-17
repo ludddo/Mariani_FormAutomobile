@@ -42,9 +42,9 @@
             // 
             // Accellera
             // 
-            this.Accellera.Location = new System.Drawing.Point(339, 235);
+            this.Accellera.Location = new System.Drawing.Point(160, 131);
             this.Accellera.Name = "Accellera";
-            this.Accellera.Size = new System.Drawing.Size(75, 23);
+            this.Accellera.Size = new System.Drawing.Size(60, 23);
             this.Accellera.TabIndex = 0;
             this.Accellera.Text = "Accellera";
             this.Accellera.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             // 
             // Accendi
             // 
-            this.Accendi.Location = new System.Drawing.Point(155, 190);
+            this.Accendi.Location = new System.Drawing.Point(34, 85);
             this.Accendi.Name = "Accendi";
             this.Accendi.Size = new System.Drawing.Size(75, 23);
             this.Accendi.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // Spegni
             // 
-            this.Spegni.Location = new System.Drawing.Point(155, 219);
+            this.Spegni.Location = new System.Drawing.Point(34, 114);
             this.Spegni.Name = "Spegni";
             this.Spegni.Size = new System.Drawing.Size(75, 23);
             this.Spegni.TabIndex = 2;
@@ -72,9 +72,9 @@
             // 
             // Decellera
             // 
-            this.Decellera.Location = new System.Drawing.Point(339, 264);
+            this.Decellera.Location = new System.Drawing.Point(226, 131);
             this.Decellera.Name = "Decellera";
-            this.Decellera.Size = new System.Drawing.Size(75, 23);
+            this.Decellera.Size = new System.Drawing.Size(64, 23);
             this.Decellera.TabIndex = 3;
             this.Decellera.Text = "Decellera";
             this.Decellera.UseVisualStyleBackColor = true;
@@ -83,16 +83,16 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(265, 90);
+            this.listView1.Location = new System.Drawing.Point(140, 18);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(228, 139);
+            this.listView1.Size = new System.Drawing.Size(173, 107);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
             // 
             // marcia1
             // 
-            this.marcia1.Location = new System.Drawing.Point(538, 235);
+            this.marcia1.Location = new System.Drawing.Point(160, 160);
             this.marcia1.Name = "marcia1";
             this.marcia1.Size = new System.Drawing.Size(25, 23);
             this.marcia1.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             // marcia2
             // 
-            this.marcia2.Location = new System.Drawing.Point(538, 264);
+            this.marcia2.Location = new System.Drawing.Point(160, 189);
             this.marcia2.Name = "marcia2";
             this.marcia2.Size = new System.Drawing.Size(25, 23);
             this.marcia2.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // marcia3
             // 
-            this.marcia3.Location = new System.Drawing.Point(569, 235);
+            this.marcia3.Location = new System.Drawing.Point(210, 160);
             this.marcia3.Name = "marcia3";
             this.marcia3.Size = new System.Drawing.Size(25, 23);
             this.marcia3.TabIndex = 7;
@@ -122,7 +122,7 @@
             // 
             // marcia4
             // 
-            this.marcia4.Location = new System.Drawing.Point(569, 264);
+            this.marcia4.Location = new System.Drawing.Point(210, 189);
             this.marcia4.Name = "marcia4";
             this.marcia4.Size = new System.Drawing.Size(25, 23);
             this.marcia4.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             // marcia5
             // 
-            this.marcia5.Location = new System.Drawing.Point(600, 235);
+            this.marcia5.Location = new System.Drawing.Point(265, 160);
             this.marcia5.Name = "marcia5";
             this.marcia5.Size = new System.Drawing.Size(25, 23);
             this.marcia5.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(436, 224);
             this.Controls.Add(this.marcia5);
             this.Controls.Add(this.marcia4);
             this.Controls.Add(this.marcia3);

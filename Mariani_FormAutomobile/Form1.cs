@@ -21,8 +21,9 @@ namespace Mariani_FormAutomobile
         private void Accendi_Click(object sender, EventArgs e)
         {
             auto.Accendi();
+            listView1.Items.Clear();
             listView1.Items.Add("Stato Attuale: Accesa");
-            listView1.Items.Add("Marcia Attuale: 1");
+            listView1.Items.Add("Marcia Attuale: Folle");
             listView1.Items.Add("Velocità Attuale = 0");
         }
 
@@ -31,9 +32,9 @@ namespace Mariani_FormAutomobile
             
             auto.Spegni();
 
-            if (auto.GetMarcia() != 1)
+            if (auto.GetVelocita() != 0)
             {
-                MessageBox.Show("Per Spegnere l'Auto devi essere in PRIMA");
+                MessageBox.Show("Per Spegnere l'Auto devi essere a 0 km/h");
             }
 
             StatoAttuale();

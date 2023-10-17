@@ -22,7 +22,7 @@ namespace Mariani_FormAutomobile
 
         public void Spegni()
         {
-            if ( marcia == 1 )
+            if ( velocita == 0 )
             {
                 attiva = false;
                 velocita = 0;
@@ -47,7 +47,7 @@ namespace Mariani_FormAutomobile
                 switch (marcia)
                 {
                     case 1:
-                        velocita = 30 + i;
+                        velocita = 20 + i;
                         break;
                     case 2:
                         velocita = 60 + i;
