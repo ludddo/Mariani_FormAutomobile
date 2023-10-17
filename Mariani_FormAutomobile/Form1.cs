@@ -18,9 +18,16 @@ namespace Mariani_FormAutomobile
             InitializeComponent();
         }
 
+        private void Accendi_Click(object sender, EventArgs e)
+        {
+            auto.Accendi();
+        }
+
         private void Accellera_Click(object sender, EventArgs e)
         {
-            auto.SetAzione("a");
+            
         }
+
+        
     }
 }
