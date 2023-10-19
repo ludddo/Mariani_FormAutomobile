@@ -15,6 +15,11 @@ namespace Mariani_FormAutomobile
 
         public Automatica() : base() { numeroGiri = 1500; }
 
+        public int GetNumeroGiri()
+        {
+            return numeroGiri;
+        }
+
         public override void Movimento(string cosaFare)
         {
             int i = 0;

@@ -166,21 +166,23 @@
             // 
             // manuale
             // 
-            this.manuale.Location = new System.Drawing.Point(54, 78);
+            this.manuale.Location = new System.Drawing.Point(31, 90);
             this.manuale.Name = "manuale";
             this.manuale.Size = new System.Drawing.Size(75, 23);
             this.manuale.TabIndex = 0;
             this.manuale.Text = "Manuale";
             this.manuale.UseVisualStyleBackColor = true;
+            this.manuale.Click += new System.EventHandler(this.manuale_Click);
             // 
             // automatica
             // 
-            this.automatica.Location = new System.Drawing.Point(159, 78);
+            this.automatica.Location = new System.Drawing.Point(159, 90);
             this.automatica.Name = "automatica";
             this.automatica.Size = new System.Drawing.Size(75, 23);
             this.automatica.TabIndex = 1;
             this.automatica.Text = "Automatica";
             this.automatica.UseVisualStyleBackColor = true;
+            this.automatica.Click += new System.EventHandler(this.automatica_Click);
             // 
             // Form1
             // 

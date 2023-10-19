@@ -12,61 +12,143 @@ namespace Mariani_FormAutomobile
 {
     public partial class Form1 : Form
     {
-        
+
+        int auto_manual = 0;
+
+        Automobile auto = new Automobile();
+        Automatica cambio_auto = new Automatica();
+
         public Form1()
         {
             InitializeComponent();
             
         }
 
+        private void manuale_Click(object sender, EventArgs e)
+        {
+            auto_manual = -1;
+            groupBox1.Visible = false;
+        }
+
+        private void automatica_Click(object sender, EventArgs e)
+        {
+            auto_manual = 1;
+            groupBox1.Visible = false;
+            marcia1.Visible = false;
+            marcia2.Visible = false;
+            marcia3.Visible = false;
+            marcia4.Visible = false;
+            marcia5.Visible = false;
+        }
+
         private void Accendi_Click(object sender, EventArgs e)
         {
-            auto.Accendi();
-            listView1.Items.Clear();
-            listView1.Items.Add("Stato Attuale: Accesa");
-            listView1.Items.Add("Marcia Attuale: Folle");
-            listView1.Items.Add("Velocità Attuale = 0");
+            if (auto_manual == -1)
+            {
+                auto.Accendi();
+                listView1.Items.Clear();
+                listView1.Items.Add("Stato Attuale: Accesa");
+                listView1.Items.Add("Marcia Attuale: Folle");
+                listView1.Items.Add("Velocità Attuale = 0");
+            }
+            else
+            {
+                cambio_auto.Accendi();
+                listView1.Items.Clear();
+                listView1.Items.Add("Stato Attuale: Accesa");
+                listView1.Items.Add("Marcia Attuale: Folle");
+                listView1.Items.Add("Velocità Attuale = 0");
+                listView1.Items.Add("Numero di Giri = 0");
+            }
         }
 
         private void Spegni_Click(object sender, EventArgs e)
         {
-            
-            auto.Spegni();
-
-            if (auto.GetVelocita() != 0)
+            if (auto_manual == -1)
             {
-                MessageBox.Show("Per Spegnere l'Auto devi essere a 0 km/h");
-            }
+                auto.Spegni();
 
-            StatoAttuale();
+                if (auto.GetVelocita() != 0)
+                {
+                    MessageBox.Show("Per Spegnere l'Auto devi essere a 0 km/h");
+                }
+
+                StatoAttuale();
+            }
+            else
+            {
+                cambio_auto.Spegni();
+
+                if (cambio_auto.GetVelocita() != 0)
+                {
+                    MessageBox.Show("Per Spegnere l'Auto devi essere a 0 km/h");
+                }
+
+                StatoAttuale();
+            }
         }
 
         private void Accellera_Click(object sender, EventArgs e)
         {
-            auto.Movimento("accellera");
-            int velocita = auto.GetVelocita();
-            if (velocita == -1)
+            if (auto_manual == -1)
             {
-                MessageBox.Show("Accendere l'Auto");
-                return;
+                auto.Movimento("accellera");
+                int velocita = auto.GetVelocita();
+                if (velocita == -1)
+                {
+                    MessageBox.Show("Accendere l'Auto");
+                    return;
+                }
+
+                StatoAttuale();
+            }
+            else
+            {
+                cambio_auto.Movimento("accellera");
+                int velocita = cambio_auto.GetVelocita();
+                if (velocita == -1)
+                {
+                    MessageBox.Show("Accendere l'Auto");
+                    return;
+                }
+
+                StatoAttuale();
             }
 
-            StatoAttuale();            
+                       
         }
 
         private void Decellera_Click(object sender, EventArgs e)
         {
-            auto.Movimento("decellera");
+            if (auto_manual == -1)
+            {
+                auto.Movimento("decellera");
+            }
+            else
+            {
+                cambio_auto.Movimento("decellera");
+            }
 
             StatoAttuale();
         }
 
         private void StatoAttuale()
         {
-            listView1.Items.Clear();
-            listView1.Items.Add("Stato dell'Auto: " + auto.GetAttiva());
-            listView1.Items.Add("Marcia Attuale: " + auto.GetMarcia());
-            listView1.Items.Add("Velocità Attuale: " + auto.GetVelocita());
+            if (auto_manual == -1)
+            {
+                listView1.Items.Clear();
+                listView1.Items.Add("Stato dell'Auto: " + auto.GetAttiva());
+                listView1.Items.Add("Marcia Attuale: " + auto.GetMarcia());
+                listView1.Items.Add("Velocità Attuale: " + auto.GetVelocita());
+            }
+            else
+            {
+                listView1.Items.Clear();
+                listView1.Items.Add("Stato dell'Auto: " + cambio_auto.GetAttiva());
+                listView1.Items.Add("Marcia Attuale: " + cambio_auto.GetMarcia());
+                listView1.Items.Add("Velocità Attuale: " + cambio_auto.GetVelocita());
+                listView1.Items.Add("Numero di Giri Attuale: " + cambio_auto.GetNumeroGiri());
+            }
         }
 
         private void marcia1_Click(object sender, EventArgs e)
@@ -93,5 +175,7 @@ namespace Mariani_FormAutomobile
         {
             auto.SetMarcia(5);
         }
+
+        
     }
 }
