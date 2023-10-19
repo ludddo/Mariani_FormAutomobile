@@ -1,49 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Mariani_FormAutomobile
 {
-    internal class Automobile
+    internal class Automatica : Automobile
     {
+        private int numeroGiri;
         private int velocita;
         private bool attiva;
         private int marcia;
 
-        public Automobile() { velocita = 0; marcia = 1; }
+        public Automatica() : base() { numeroGiri = 1500; }
 
-        public void Accendi()
-        {
-            attiva = true;
-        }
-
-        public void Spegni()
-        {
-            if ( velocita == 0 )
-            {
-                attiva = false;
-                velocita = 0;
-            }
-        }
-
-        public virtual void SetMarcia(int numero)
-        {
-            marcia = numero;
-        }
-
-        public virtual void Movimento(string cosaFare) 
+        public override void Movimento(string cosaFare)
         {
             int i = 0;
 
-            if (cosaFare == "accellera") { i = 0;}
-            else { i = -20;}
+            if (cosaFare == "accellera") { i = 0; numeroGiri += 1000; }
+            else { i = -20; numeroGiri += 1000; }
+
+            if (numeroGiri > 2000)
+            {
+                marcia++; 
+                numeroGiri = 1500;
+            }
+            else if (numeroGiri < 1000)
+            {
+                marcia--;
+                numeroGiri = 1500;
+            }
 
             if (attiva)
             {
-
                 switch (marcia)
                 {
                     case 1:
@@ -66,28 +57,6 @@ namespace Mariani_FormAutomobile
             else
             {
                 velocita = -1;
-            }
-        }
-
-        public int GetVelocita()
-        {
-            return velocita;
-        }
-
-        public int GetMarcia()
-        {
-            return marcia;
-        }
-
-        public string GetAttiva()
-        {
-            if (attiva)
-            {
-                return "accesa";
-            }
-            else
-            {
-                return "spenta";
             }
         }
     }

@@ -38,6 +38,10 @@
             this.marcia3 = new System.Windows.Forms.Button();
             this.marcia4 = new System.Windows.Forms.Button();
             this.marcia5 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.manuale = new System.Windows.Forms.Button();
+            this.automatica = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Accellera
@@ -149,11 +153,41 @@
             this.marcia5.UseVisualStyleBackColor = false;
             this.marcia5.Click += new System.EventHandler(this.marcia5_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.automatica);
+            this.groupBox1.Controls.Add(this.manuale);
+            this.groupBox1.Location = new System.Drawing.Point(79, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(272, 159);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // manuale
+            // 
+            this.manuale.Location = new System.Drawing.Point(54, 78);
+            this.manuale.Name = "manuale";
+            this.manuale.Size = new System.Drawing.Size(75, 23);
+            this.manuale.TabIndex = 0;
+            this.manuale.Text = "Manuale";
+            this.manuale.UseVisualStyleBackColor = true;
+            // 
+            // automatica
+            // 
+            this.automatica.Location = new System.Drawing.Point(159, 78);
+            this.automatica.Name = "automatica";
+            this.automatica.Size = new System.Drawing.Size(75, 23);
+            this.automatica.TabIndex = 1;
+            this.automatica.Text = "Automatica";
+            this.automatica.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 224);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.marcia5);
             this.Controls.Add(this.marcia4);
             this.Controls.Add(this.marcia3);
@@ -166,6 +200,7 @@
             this.Controls.Add(this.Accellera);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -182,6 +217,9 @@
         private System.Windows.Forms.Button marcia3;
         private System.Windows.Forms.Button marcia4;
         private System.Windows.Forms.Button marcia5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button manuale;
+        private System.Windows.Forms.Button automatica;
     }
 }
 

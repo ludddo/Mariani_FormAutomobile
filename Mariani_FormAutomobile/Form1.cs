@@ -12,10 +12,11 @@ namespace Mariani_FormAutomobile
 {
     public partial class Form1 : Form
     {
-        Automobile auto = new Automobile();
+        
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Accendi_Click(object sender, EventArgs e)
