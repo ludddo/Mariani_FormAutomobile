@@ -9,29 +9,33 @@ namespace Mariani_FormAutomobile
 {
     internal class Automobile
     {
-        private int velocita;
-        private bool attiva;
-        private int marcia;
+        private int _velocita;
+        private bool _attiva;
+        private int _marcia;
 
-        public Automobile() { velocita = 0; marcia = 1; }
+        public int Velocita { get { return _velocita; } set { _velocita = value; } }
+        public int Marcia { get { return _marcia; }  set { if (value <= 5 || value > 0) _marcia = value;  } }
+        public bool Attiva { get; set; }
 
-        public void Accendi()
+        public Automobile() { Velocita = 0; Marcia = 1; }
+
+        public virtual void Accendi()
         {
-            attiva = true;
+            Attiva = true;
         }
 
         public void Spegni()
         {
-            if ( velocita == 0 )
+            if ( Velocita == 0 )
             {
-                attiva = false;
-                velocita = 0;
+                Attiva = false;
+                Velocita = 0;
             }
         }
 
         public virtual void SetMarcia(int numero)
         {
-            marcia = numero;
+            Marcia = numero;
         }
 
         public virtual void Movimento(string cosaFare) 
@@ -41,47 +45,46 @@ namespace Mariani_FormAutomobile
             if (cosaFare == "accellera") { i = 0;}
             else { i = -20;}
 
-            if (attiva)
+            if (Attiva)
             {
-
-                switch (marcia)
+                switch (Marcia)
                 {
                     case 1:
-                        velocita = 20 + i;
+                        Velocita = 20 + i;
                         break;
                     case 2:
-                        velocita = 60 + i;
+                        Velocita = 60 + i;
                         break;
                     case 3:
-                        velocita = 90 + i;
+                        Velocita = 90 + i;
                         break;
                     case 4:
-                        velocita = 120 + i;
+                        Velocita = 120 + i;
                         break;
                     case 5:
-                        velocita = 150 + i;
+                        Velocita = 150 + i;
                         break;
                 }
             }
             else
             {
-                velocita = -1;
+                Velocita = -1;
             }
         }
 
         public int GetVelocita()
         {
-            return velocita;
+            return Velocita;
         }
 
         public int GetMarcia()
         {
-            return marcia;
+            return Marcia;
         }
 
         public string GetAttiva()
         {
-            if (attiva)
+            if (Attiva)
             {
                 return "accesa";
             }

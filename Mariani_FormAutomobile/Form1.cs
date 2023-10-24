@@ -154,26 +154,31 @@ namespace Mariani_FormAutomobile
         private void marcia1_Click(object sender, EventArgs e)
         {
             auto.SetMarcia(1);
+            StatoAttuale();
         }
 
         private void marcia2_Click(object sender, EventArgs e)
         {
             auto.SetMarcia(2);
+            StatoAttuale();
         }
 
         private void marcia3_Click(object sender, EventArgs e)
         {
             auto.SetMarcia(3);
+            StatoAttuale();
         }
 
         private void marcia4_Click(object sender, EventArgs e)
         {
             auto.SetMarcia(4);
+            StatoAttuale();
         }
 
         private void marcia5_Click(object sender, EventArgs e)
         {
             auto.SetMarcia(5);
+            StatoAttuale();
         }
 
         

@@ -39,8 +39,8 @@
             this.marcia4 = new System.Windows.Forms.Button();
             this.marcia5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.manuale = new System.Windows.Forms.Button();
             this.automatica = new System.Windows.Forms.Button();
+            this.manuale = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,22 +157,12 @@
             // 
             this.groupBox1.Controls.Add(this.automatica);
             this.groupBox1.Controls.Add(this.manuale);
-            this.groupBox1.Location = new System.Drawing.Point(79, 24);
+            this.groupBox1.Location = new System.Drawing.Point(85, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(272, 159);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // manuale
-            // 
-            this.manuale.Location = new System.Drawing.Point(31, 90);
-            this.manuale.Name = "manuale";
-            this.manuale.Size = new System.Drawing.Size(75, 23);
-            this.manuale.TabIndex = 0;
-            this.manuale.Text = "Manuale";
-            this.manuale.UseVisualStyleBackColor = true;
-            this.manuale.Click += new System.EventHandler(this.manuale_Click);
             // 
             // automatica
             // 
@@ -183,6 +173,16 @@
             this.automatica.Text = "Automatica";
             this.automatica.UseVisualStyleBackColor = true;
             this.automatica.Click += new System.EventHandler(this.automatica_Click);
+            // 
+            // manuale
+            // 
+            this.manuale.Location = new System.Drawing.Point(31, 90);
+            this.manuale.Name = "manuale";
+            this.manuale.Size = new System.Drawing.Size(75, 23);
+            this.manuale.TabIndex = 0;
+            this.manuale.Text = "Manuale";
+            this.manuale.UseVisualStyleBackColor = true;
+            this.manuale.Click += new System.EventHandler(this.manuale_Click);
             // 
             // Form1
             // 

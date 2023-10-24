@@ -9,11 +9,11 @@ namespace Mariani_FormAutomobile
     internal class Automatica : Automobile
     {
         private int numeroGiri;
-        private int velocita;
-        private bool attiva;
-        private int marcia;
 
-        public Automatica() : base() { numeroGiri = 1500; }
+        public Automatica() : base()
+        { 
+            numeroGiri = 1500; 
+        }
 
         public int GetNumeroGiri()
         {
@@ -25,43 +25,54 @@ namespace Mariani_FormAutomobile
             int i = 0;
 
             if (cosaFare == "accellera") { i = 0; numeroGiri += 1000; }
-            else { i = -20; numeroGiri += 1000; }
+            else { i = -20; numeroGiri = 1000; }
 
             if (numeroGiri > 2000)
             {
-                marcia++; 
-                numeroGiri = 1500;
+                if (Marcia != 5)
+                {
+                    Marcia++;
+                    numeroGiri = 1500;
+                }
+                else
+                {
+                    numeroGiri = 2500;
+                }
             }
-            else if (numeroGiri < 1000)
+            else if (numeroGiri <= 1000)
             {
-                marcia--;
-                numeroGiri = 1500;
+                if (Marcia > 0)
+                {
+                    Marcia--;
+                    numeroGiri = 1500;
+                }
+                
             }
 
-            if (attiva)
+            if (Attiva)
             {
-                switch (marcia)
+                switch (Marcia)
                 {
                     case 1:
-                        velocita = 20 + i;
+                        Velocita = 20 + i;
                         break;
                     case 2:
-                        velocita = 60 + i;
+                        Velocita = 60 + i;
                         break;
                     case 3:
-                        velocita = 90 + i;
+                        Velocita = 90 + i;
                         break;
                     case 4:
-                        velocita = 120 + i;
+                        Velocita = 120 + i;
                         break;
                     case 5:
-                        velocita = 150 + i;
+                        Velocita = 150 + i;
                         break;
                 }
             }
             else
             {
-                velocita = -1;
+                Velocita = -1;
             }
         }
     }
