@@ -41,6 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.automatica = new System.Windows.Forms.Button();
             this.manuale = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,18 +156,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.automatica);
             this.groupBox1.Controls.Add(this.manuale);
-            this.groupBox1.Location = new System.Drawing.Point(85, 24);
+            this.groupBox1.Location = new System.Drawing.Point(0, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 159);
+            this.groupBox1.Size = new System.Drawing.Size(435, 227);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // automatica
             // 
-            this.automatica.Location = new System.Drawing.Point(159, 90);
+            this.automatica.Location = new System.Drawing.Point(265, 132);
             this.automatica.Name = "automatica";
             this.automatica.Size = new System.Drawing.Size(75, 23);
             this.automatica.TabIndex = 1;
@@ -176,13 +178,23 @@
             // 
             // manuale
             // 
-            this.manuale.Location = new System.Drawing.Point(31, 90);
+            this.manuale.Location = new System.Drawing.Point(89, 132);
             this.manuale.Name = "manuale";
             this.manuale.Size = new System.Drawing.Size(75, 23);
             this.manuale.TabIndex = 0;
             this.manuale.Text = "Manuale";
             this.manuale.UseVisualStyleBackColor = true;
             this.manuale.Click += new System.EventHandler(this.manuale_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Che Cambio desideri Utilizzare?";
             // 
             // Form1
             // 
@@ -203,6 +215,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -222,6 +235,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button manuale;
         private System.Windows.Forms.Button automatica;
+        private System.Windows.Forms.Label label1;
     }
 }
 

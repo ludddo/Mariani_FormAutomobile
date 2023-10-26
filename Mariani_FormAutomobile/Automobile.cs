@@ -19,6 +19,11 @@ namespace Mariani_FormAutomobile
 
         public Automobile() { Velocita = 0; Marcia = 1; }
 
+        public Automobile(Automobile auto)
+        {
+            Velocita= auto.Velocita; Marcia = auto.Marcia; Attiva = auto.Attiva;
+        }
+
         public virtual void Accendi()
         {
             Attiva = true;

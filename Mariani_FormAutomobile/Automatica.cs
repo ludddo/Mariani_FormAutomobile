@@ -8,43 +8,51 @@ namespace Mariani_FormAutomobile
 {
     internal class Automatica : Automobile
     {
-        private int numeroGiri;
+        private int _numeroGiri;
 
         public Automatica() : base()
         { 
-            numeroGiri = 1500; 
+            NumeroGiri = 1500; 
         }
+
+        public Automatica(Automatica automatica) /*: base(automatica)*/ 
+        {
+            NumeroGiri = automatica.NumeroGiri;
+        }
+
+
+        public int NumeroGiri { get; set; }
 
         public int GetNumeroGiri()
         {
-            return numeroGiri;
+            return NumeroGiri;
         }
 
         public override void Movimento(string cosaFare)
         {
             int i = 0;
 
-            if (cosaFare == "accellera") { i = 0; numeroGiri += 1000; }
-            else { i = -20; numeroGiri = 1000; }
+            if (cosaFare == "accellera") { i = 0; NumeroGiri += 1000; }
+            else { i = -20; NumeroGiri = 1000; }
 
-            if (numeroGiri > 2000)
+            if (NumeroGiri > 2000)
             {
                 if (Marcia != 5)
                 {
                     Marcia++;
-                    numeroGiri = 1500;
+                    NumeroGiri = 1500;
                 }
                 else
                 {
-                    numeroGiri = 2500;
+                    NumeroGiri = 2500;
                 }
             }
-            else if (numeroGiri <= 1000)
+            else if (NumeroGiri <= 1000)
             {
                 if (Marcia > 0)
                 {
                     Marcia--;
-                    numeroGiri = 1500;
+                    NumeroGiri = 1500;
                 }
                 
             }

@@ -43,7 +43,8 @@ namespace Mariani_FormAutomobile
 
         private void Accendi_Click(object sender, EventArgs e)
         {
-            if (auto_manual == -1)
+            
+            if (auto_manual == -1 && auto.Attiva == false)
             {
                 auto.Accendi();
                 listView1.Items.Clear();
@@ -51,7 +52,7 @@ namespace Mariani_FormAutomobile
                 listView1.Items.Add("Marcia Attuale: Folle");
                 listView1.Items.Add("Velocità Attuale = 0");
             }
-            else
+            else if (cambio_auto.Attiva == false)
             {
                 cambio_auto.Accendi();
                 listView1.Items.Clear();
@@ -181,6 +182,9 @@ namespace Mariani_FormAutomobile
             StatoAttuale();
         }
 
-        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
